@@ -54,7 +54,7 @@ public class RobotWars {
                 robotTicker = 1;
             }
             while (columns < 4) {          //generates number of [] as columns
-                if (robotColumn == columns-1 && robotTicker == 1) {
+                if (robotColumn == columns - 1 && robotTicker == 1) {
                     map = map + "[R]";
                     robotTicker = 2;
                     columns++;
@@ -64,7 +64,9 @@ public class RobotWars {
                 }
 
             }
-            System.out.println(map);
-        }
 
+
+        }
+        System.out.println(map);
     }
+}
