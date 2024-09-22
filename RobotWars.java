@@ -106,9 +106,9 @@ public class RobotWars {
             int col = 0;
             while (col < columns) {
                 if (row == robotRow && col == robotCol) {
-                    System.out.print("R "); // Place the robot
+                    System.out.print("[R]"); // Place the robot
                 } else {
-                    System.out.print(". "); // Empty space
+                    System.out.print("[ ]"); // Empty space
                 }
                 col++;
             }
