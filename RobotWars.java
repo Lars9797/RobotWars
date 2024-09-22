@@ -37,6 +37,7 @@ public class RobotWars {
 
         //Generate battlemap
 
+        /*
         int rows = 0;
         int columns = 1;
         String map = "";
@@ -62,11 +63,61 @@ public class RobotWars {
                     map = map + "[]";
                     columns++;
                 }
-
             }
-
-
         }
         System.out.println(map);
+
+        int rows = 6;
+        int columns = 4;
+
+        String[][] battleMap = new String[rows][columns];
+
+        rows = 0;
+        columns = 0;
+
+        while (rows < battleMap.length) {            //generates number of [] as rows
+            battleMap[rows][columns] = "[]";
+            rows++;
+        }
+        while (columns < battleMap.length) {          //generates number of [] as columns
+            battleMap[rows][columns] = "[]";
+            columns++;
+        }
+        */
+
+        System.out.print("Enter the number of rows for the grid: ");         // Input grid size (rows and columns)
+        int rows = scanner.nextInt();
+        System.out.print("Enter the number of columns for the grid: ");
+        int columns = scanner.nextInt();
+
+        int robotRow = -1, robotCol = -1;           // Input robot's initial position (row and column)
+
+        while (robotRow < 0 || robotRow >= rows) {
+            System.out.print("Enter the robot's initial row (0 to " + (rows - 1) + "): ");
+            robotRow = scanner.nextInt();
+        }
+        while (robotCol < 0 || robotCol >= columns) {
+            System.out.print("Enter the robot's initial column (0 to " + (columns - 1) + "): ");
+            robotCol = scanner.nextInt();
+        }
+
+        int row = 0;            // Create the grid and place the robot
+        while (row < rows) {
+            int col = 0;
+            while (col < columns) {
+                if (row == robotRow && col == robotCol) {
+                    System.out.print("R "); // Place the robot
+                } else {
+                    System.out.print(". "); // Empty space
+                }
+                col++;
+            }
+            System.out.println(); // Move to the next row
+            row++;
+        }
     }
 }
+
+
+
+
