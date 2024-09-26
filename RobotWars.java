@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 public class RobotWars {
 
-
     public static void main(String[] args) {
         //Greetings and user Name
         Scanner scanner = new Scanner(System.in);
@@ -37,54 +36,6 @@ public class RobotWars {
 
         //Generate battlemap
 
-        /*
-        int rows = 0;
-        int columns = 1;
-        String map = "";
-
-        int robotRow = 2;
-        int robotColumn = 3;
-        int robotTicker = 0;
-
-        while (rows < 6) {            //generates number of [] as rows
-            map = "[]";
-            rows++;
-            columns = 1;
-
-            if (robotRow == rows) {    //checks for same Robot position
-                robotTicker = 1;
-            }
-            while (columns < 4) {          //generates number of [] as columns
-                if (robotColumn == columns - 1 && robotTicker == 1) {
-                    map = map + "[R]";
-                    robotTicker = 2;
-                    columns++;
-                } else {
-                    map = map + "[]";
-                    columns++;
-                }
-            }
-        }
-        System.out.println(map);
-
-        int rows = 6;
-        int columns = 4;
-
-        String[][] battleMap = new String[rows][columns];
-
-        rows = 0;
-        columns = 0;
-
-        while (rows < battleMap.length) {            //generates number of [] as rows
-            battleMap[rows][columns] = "[]";
-            rows++;
-        }
-        while (columns < battleMap.length) {          //generates number of [] as columns
-            battleMap[rows][columns] = "[]";
-            columns++;
-        }
-        */
-
         System.out.print("Enter the number of rows for the grid: ");         // Input grid size (rows and columns)
         int rows = scanner.nextInt();
         System.out.print("Enter the number of columns for the grid: ");
@@ -112,7 +63,7 @@ public class RobotWars {
                 }
                 col++;
             }
-            System.out.println(); // Move to the next row
+            System.out.println();
             row++;
         }
     }
